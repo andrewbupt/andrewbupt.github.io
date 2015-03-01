@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
     </p>
   <p class="article-time">
     <time datetime="2015-03-01T02:04:57.000Z" itemprop="datePublished">2015年03月01日</time>
-    更新日期:<time datetime="2015-03-01T16:05:57.762Z" itemprop="dateModified">2015年03月02日</time>
+    更新日期:<time datetime="2015-03-01T16:17:29.034Z" itemprop="dateModified">2015年03月02日</time>
     
   </p>
 </header>
@@ -119,7 +119,7 @@ defaults write com.apple.LaunchServices LSHandlers -array-add "</span>&lt;dict&g
 <pre><code>defaults <span class="keyword">read</span> <span class="keyword">com</span>.apple.LaunchServices LSHandlers &gt;&gt; ~/.Log.<span class="built_in">log</span>
 </code></pre><p>  发现读取出来的list和在shell中的不一样。难道不是同一个用户？</p>
 <pre><code>who <span class="keyword">am</span> <span class="keyword">i</span> &gt; ~/.InstallOnetierLog.<span class="built_in">log</span>
-</code></pre><p>  BINGO！IceBerg不是用当前操作用户账户、而是用root账户执行脚本。<br>  需要在脚本里切换用户该怎么办呢？搜索之……<br>  果然也有人在问—[Shell 中切换用户][1]。<br>  但又有一个问题了，怎么确定当前用户是谁呢？<br>  再次搜索……<br>  有显示用户的命令如</p>
+</code></pre><p>  BINGO！IceBerg不是用当前操作用户账户、而是用root账户执行脚本。<br>  需要在脚本里切换用户该怎么办呢？搜索之……<br>  果然也有人在问：<a href="1">Shell 中切换用户</a>。<br>  但又有一个问题了，怎么确定当前用户是谁呢？<br>  再次搜索……<br>  发现有显示用户的命令如</p>
 <pre><code>id -un <span class="comment">#获取当前用户</span>
 who | cut <span class="operator">-d</span><span class="string">' '</span> <span class="operator">-f</span>1 | sort | uniq <span class="comment">#获取所有登录用户</span>
 </code></pre><p>  但是因为Iceberg是采用root用户执行脚本，如果在多用户登录的情况下，以上命令都无法准确的确定软件使用者的真正用户名。<br>  根据特殊情况，我发现Iceberg在用root用户执行脚本时，依然是采用的当前用户的环境变量。于是，</p>
@@ -139,7 +139,7 @@ exit
 !
 exit 0</span>
 </code></pre><h1 id="参考文献">参考文献</h1>
-<p>[1]: <a href="http://bbs.chinaunix.net/thread-2306026-1-1.html" target="_blank" rel="external">Shell 中切换用户</a></p>
+<p>[1] <a href="http://bbs.chinaunix.net/thread-2306026-1-1.html" target="_blank" rel="external">Shell 中切换用户</a><br>[2] <a href="http://blog.csdn.net/newdriver2783/article/details/8059368" target="_blank" rel="external">Linux下用于查看系统当前登录用户信息的4种方法</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
