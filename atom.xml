@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Action speak louder than words.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-03-01T16:02:45.401Z</updated>
+  <updated>2015-03-01T16:04:08.243Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,8 +19,21 @@
     <link href="http://yoursite.com/2015/03/01/Change-files-default-associate-app-by-IceBerg/"/>
     <id>http://yoursite.com/2015/03/01/Change-files-default-associate-app-by-IceBerg/</id>
     <published>2015-03-01T02:04:57.000Z</published>
-    <updated>2015-03-01T16:02:32.022Z</updated>
-    <content type="html"><![CDATA[<p>  公司的Mac App产品，需要设置成为打开特定格式(.CSV 和 .XLS)文件的默认程序。<br>  经过调研，在程序启动后向OSX系统com.apple.LaunchServices服务，写入特定的信息，可以满足需求。但是PM认为用户可能更想要在将APP安装后，就设置为特定文件的默认打开程序，而不是在首次启动程序之后。<br>  这就需要在将APP下载到Mac上之后，能自动执行一些脚本。因为Mac的普通APP安装，其实就是从DMG虚拟磁盘文件里或网上直接将APP拷贝到Mac上，期间无法进行脚本调用。于是只能借用打包软件，让用户按步骤安装。<br>  我找到了IceBerg这款开源打包软件。软件很容易上手，执行也很快，打包之后的压缩大小和zip压缩幅度差不多。<br>  但在使用过程中，发现脚本执行结果和预期的不一样。<br>脚本如下：<br>···<br>    echo “clear user/system local session cache” &gt;&gt; ~/.Log.log<br>    /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -domain local -domain system -domain user<br>    echo “registe 1-tier as xls/csv default app” &gt;&gt; ~/.Log.log<br>    defaults write com.apple.LaunchServices LSHandlers -array-add “<dict><key>LSHandlerContentTag</key><string>xls</string><key>LSHandlerContentTagClass</key><string>public.filename-extension</string><key>LSHandlerRoleAll</key><string><strong><em>.</em></strong></string></dict>“<br>    defaults write com.apple.LaunchServices LSHandlers -array-add “<dict><key>LSHandlerContentTag</key><string>csv</string><key>LSHandlerContentTagClass</key><string>public.filename-extension</string><key>LSHandlerRoleAll</key><string><strong><em>.</em></strong></string></dict>“<br>···<br>  单独在shell中用sh方式执行脚本的时候，defaults read com.apple.LaunchServices LSHandlers 可以看到csv/xls两个选项被增加了,但当IceBerg调用脚本执行后，并不会增加任何选项。通过日志方式，发现脚本的确是执行了的。<br>  百思不得其解，无奈插入新的日志<br>···<br>    defaults read com.apple.LaunchServices LSHandlers &gt;&gt; ~/.Log.log<br>···<br>  发现读取出来的list和在shell中的不一样。难道不是同一个用户？<br>···<br>    who am i &gt; ~/.InstallOnetierLog.log<br>···<br>  BINGO！IceBerg不是用当前操作用户账户、而是用root账户执行脚本。<br>  需要在脚本里切换用户该怎么办呢？搜索之……<br>  果然也有人在问—[Shell 中切换用户][1]。<br>  但又有一个问题了，怎么确定当前用户是谁呢？<br>  再次搜索……<br>  有显示用户的命令如<br>···<br>    id -un #获取当前用户<br>    who | cut -d’ ‘ -f1 | sort | uniq #获取所有登录用户<br>···<br>  但是因为Iceberg是采用root用户执行脚本，如果在多用户登录的情况下，以上命令都无法准确的确定软件使用者的真正用户名。<br>  根据特殊情况，我发现Iceberg在用root用户执行脚本时，依然是采用的当前用户的环境变量。于是，</p>
+    <updated>2015-03-01T16:04:02.850Z</updated>
+    <content type="html"><![CDATA[<p>  公司的Mac App产品，需要设置成为打开特定格式(.CSV 和 .XLS)文件的默认程序。<br>  经过调研，在程序启动后向OSX系统com.apple.LaunchServices服务，写入特定的信息，可以满足需求。但是PM认为用户可能更想要在将APP安装后，就设置为特定文件的默认打开程序，而不是在首次启动程序之后。<br>  这就需要在将APP下载到Mac上之后，能自动执行一些脚本。因为Mac的普通APP安装，其实就是从DMG虚拟磁盘文件里或网上直接将APP拷贝到Mac上，期间无法进行脚本调用。于是只能借用打包软件，让用户按步骤安装。<br>  我找到了IceBerg这款开源打包软件。软件很容易上手，执行也很快，打包之后的压缩大小和zip压缩幅度差不多。<br>  但在使用过程中，发现脚本执行结果和预期的不一样。<br>脚本如下：</p>
+<pre><code>echo "clear user/system local session <span class="operator"><span class="keyword">cache</span><span class="string">" &gt;&gt; ~/.Log.log
+/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -domain local -domain system -domain user
+echo "</span>registe <span class="number">1</span>-tier <span class="keyword">as</span> xls/csv <span class="keyword">default</span> app<span class="string">" &gt;&gt; ~/.Log.log
+defaults write com.apple.LaunchServices LSHandlers -array-add "</span>&lt;dict&gt;&lt;<span class="keyword">key</span>&gt;LSHandlerContentTag&lt;/<span class="keyword">key</span>&gt;&lt;<span class="keyword">string</span>&gt;xls&lt;/<span class="keyword">string</span>&gt;&lt;<span class="keyword">key</span>&gt;LSHandlerContentTagClass&lt;/<span class="keyword">key</span>&gt;&lt;<span class="keyword">string</span>&gt;<span class="keyword">public</span>.filename-extension&lt;/<span class="keyword">string</span>&gt;&lt;<span class="keyword">key</span>&gt;LSHandlerRoleAll&lt;/<span class="keyword">key</span>&gt;&lt;<span class="keyword">string</span>&gt;***.***&lt;/<span class="keyword">string</span>&gt;&lt;/dict&gt;<span class="string">"
+defaults write com.apple.LaunchServices LSHandlers -array-add "</span>&lt;dict&gt;&lt;<span class="keyword">key</span>&gt;LSHandlerContentTag&lt;/<span class="keyword">key</span>&gt;&lt;<span class="keyword">string</span>&gt;csv&lt;/<span class="keyword">string</span>&gt;&lt;<span class="keyword">key</span>&gt;LSHandlerContentTagClass&lt;/<span class="keyword">key</span>&gt;&lt;<span class="keyword">string</span>&gt;<span class="keyword">public</span>.filename-extension&lt;/<span class="keyword">string</span>&gt;&lt;<span class="keyword">key</span>&gt;LSHandlerRoleAll&lt;/<span class="keyword">key</span>&gt;&lt;<span class="keyword">string</span>&gt;***.***&lt;/<span class="keyword">string</span>&gt;&lt;/dict&gt;<span class="string">"</span></span>
+</code></pre><p>  单独在shell中用sh方式执行脚本的时候，defaults read com.apple.LaunchServices LSHandlers 可以看到csv/xls两个选项被增加了,但当IceBerg调用脚本执行后，并不会增加任何选项。通过日志方式，发现脚本的确是执行了的。<br>  百思不得其解，无奈插入新的日志</p>
+<pre><code>defaults <span class="keyword">read</span> <span class="keyword">com</span>.apple.LaunchServices LSHandlers &gt;&gt; ~/.Log.<span class="built_in">log</span>
+</code></pre><p>  发现读取出来的list和在shell中的不一样。难道不是同一个用户？</p>
+<pre><code>who <span class="keyword">am</span> <span class="keyword">i</span> &gt; ~/.InstallOnetierLog.<span class="built_in">log</span>
+</code></pre><p>  BINGO！IceBerg不是用当前操作用户账户、而是用root账户执行脚本。<br>  需要在脚本里切换用户该怎么办呢？搜索之……<br>  果然也有人在问—[Shell 中切换用户][1]。<br>  但又有一个问题了，怎么确定当前用户是谁呢？<br>  再次搜索……<br>  有显示用户的命令如</p>
+<pre><code>id -un <span class="comment">#获取当前用户</span>
+who | cut <span class="operator">-d</span><span class="string">' '</span> <span class="operator">-f</span>1 | sort | uniq <span class="comment">#获取所有登录用户</span>
+</code></pre><p>  但是因为Iceberg是采用root用户执行脚本，如果在多用户登录的情况下，以上命令都无法准确的确定软件使用者的真正用户名。<br>  根据特殊情况，我发现Iceberg在用root用户执行脚本时，依然是采用的当前用户的环境变量。于是，</p>
 <pre><code>currentuser=<span class="smartquote">`ls -ld ~ | cut -d '</span> ' -f3`
 </code></pre><p>  对于home目录的所有者，99%应该都是当前用户本身。对于普通用户来说，那1%例外就暂时不考虑了。<br>  最终如下尝试，顺利解决问题。</p>
 <pre><code><span class="xml">#!/bin/sh
