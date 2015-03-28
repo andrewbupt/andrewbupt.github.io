@@ -1,0 +1,477 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <!--20150224添加 百度统计分析代码
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f9402315d78b5fe1d59a7bd4ce986a84";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script> -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f9402315d78b5fe1d59a7bd4ce986a84";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+  <meta charset="UTF-8">
+  
+    <title>Markdown 11种基本语法 | Andrew&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Andrew">
+    
+    <meta name="description" content="文章是Leo Chin在学习Markdown时做的笔记。因为有时候不用，Markdown常用语法就容易混淆，所以转载并增加范例，以便以后快速使用Markdown。原址请访问：http://gd.sina.com.cn/yj/life/2015-01-14/083515454.html
+1. 标题设置">
+    
+    
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Andrew&#39;s blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+</head>
+
+  <body>
+    <header>
+      <a href="https://github.com/andrewbupt"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Andrew&#39;s blog" title="Andrew&#39;s blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Andrew&#39;s blog">Andrew&#39;s blog</a></h1>
+				<h2 class="blog-motto">Action speak louder than words.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">主页 | Home</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+					<li>
+					
+						<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="st-search-inpu" maxlength="20" placeholder="Search" />
+						</form>
+					
+					</li>
+				</ul>
+			</nav>		
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/03/28/markdown-simple-grammar/" title="Markdown 11种基本语法" itemprop="url">Markdown 11种基本语法</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="Andrew">Andrew</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2015-03-28T07:58:42.000Z" itemprop="datePublished">2015年03月28日</time>
+    更新日期:<time datetime="2015-03-28T09:51:55.298Z" itemprop="dateModified">2015年03月28日</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-_标题设置（让字体变大，和word的标题意思一样）"><span class="toc-number">1.</span> <span class="toc-text">1. 标题设置（让字体变大，和word的标题意思一样）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#范例1"><span class="toc-number"></span> <span class="toc-text">范例1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#范例2"><span class="toc-number">1.</span> <span class="toc-text">范例2</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#范例3"><span class="toc-number"></span> <span class="toc-text">范例3</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#范例4"><span class="toc-number">1.</span> <span class="toc-text">范例4</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#范例5"><span class="toc-number">1.1.</span> <span class="toc-text">范例5</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附属结论：=不需要也不能转义，-是可以的"><span class="toc-number">2.</span> <span class="toc-text">附属结论：=不需要也不能转义，-是可以的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-_块注释（blockquote）"><span class="toc-number">3.</span> <span class="toc-text">2. 块注释（blockquote）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-_斜体"><span class="toc-number">4.</span> <span class="toc-text">3. 斜体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#斜体斜体"><span class="toc-number">5.</span> <span class="toc-text">斜体斜体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-_粗体"><span class="toc-number">6.</span> <span class="toc-text">4. 粗体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#粗体粗体"><span class="toc-number">7.</span> <span class="toc-text">粗体粗体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-_无序列表"><span class="toc-number">8.</span> <span class="toc-text">5. 无序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-_有序列表"><span class="toc-number">9.</span> <span class="toc-text">6. 有序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#吐槽：如果我就想先3后2，Markdown还不让我犯这个错了"><span class="toc-number">10.</span> <span class="toc-text">吐槽：如果我就想先3后2，Markdown还不让我犯这个错了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-_链接（Links）"><span class="toc-number">11.</span> <span class="toc-text">7. 链接（Links）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-_图片（Images）"><span class="toc-number">12.</span> <span class="toc-text">8. 图片（Images）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-_代码（HTML中所谓的Code）"><span class="toc-number">13.</span> <span class="toc-text">9. 代码（HTML中所谓的Code）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-_脚注（footnote）"><span class="toc-number">14.</span> <span class="toc-text">10. 脚注（footnote）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-_下划线"><span class="toc-number">15.</span> <span class="toc-text">11. 下划线</span></a></li></ol>
+		</div>
+		
+		<p>文章是Leo Chin在学习Markdown时做的笔记。因为有时候不用，Markdown常用语法就容易混淆，所以转载并增加范例，以便以后快速使用Markdown。原址请访问：<a href="http://gd.sina.com.cn/yj/life/2015-01-14/083515454.html" target="_blank" rel="external">http://gd.sina.com.cn/yj/life/2015-01-14/083515454.html</a></p>
+<h2 id="1-_标题设置（让字体变大，和word的标题意思一样）">1. 标题设置（让字体变大，和word的标题意思一样）</h2>
+<p>在Markdown当中设置标题，有两种方式：<br>第一种：通过在文字下方添加“=”和“-”，他们分别表示一级标题和二级标题。<br>第二种：在文字开头加上 “#”，通过“#”数量表示几级标题。（一共只有1~6级标题，1级标题字体最大）</p>
+<hr>
+<blockquote>
+<p>范例1<br>\=\=\=\=\=<br>范例2<br>-----<br># 范例3<br>## 范例4<br>### 范例5</p>
+<h1 id="范例1">范例1</h1>
+<h2 id="范例2">范例2</h2>
+<h1 id="范例3">范例3</h1>
+<h2 id="范例4">范例4</h2>
+<h3 id="范例5">范例5</h3>
+<h2 id="附属结论：=不需要也不能转义，-是可以的">附属结论：=不需要也不能转义，-是可以的</h2>
+</blockquote>
+<h2 id="2-_块注释（blockquote）">2. 块注释（blockquote）</h2>
+<p>通过在文字开头添加“&gt;”表示块注释。（当&gt;和文字之间添加五个blank时，块注释的文字会有变化。）</p>
+<hr>
+<p>>注释1<br>跟>进</p>
+<p>>     注释5个空格<br>跟>进&lt;</p>
+<blockquote>
+<p>注释1<br>跟&gt;进</p>
+<pre><code>注释5个空格
+</code></pre><p>跟&gt;进&lt;</p>
+</blockquote>
+<p>结论：</p>
+<ol>
+<li><blockquote>
+<p>只管一行，5个空格后，注释会有背景色、字体变化</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>只有在行首才起作用, 在行中会自动忽略</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h2 id="3-_斜体">3. 斜体</h2>
+<p>将需要设置为斜体的文字两端使用1个“*”或者“_”夹起来</p>
+<hr>
+<p>*斜体*_斜体_</p>
+<h2 id="斜体斜体"><em>斜体</em><em>斜体</em></h2>
+<h2 id="4-_粗体">4. 粗体</h2>
+<p>将需要设置为粗体的文字两端使用2个“*”或者“_”夹起来</p>
+<hr>
+<p>**粗体**__粗体__</p>
+<h2 id="粗体粗体"><strong>粗体</strong><strong>粗体</strong></h2>
+<h2 id="5-_无序列表">5. 无序列表</h2>
+<p>在文字开头添加(<em>, +, and -)实现无序列表。但是要注意在(</em>, +, and -)和文字之间需要添加空格。（建议：一个文档中只是用一种无序列表的表示方式）</p>
+<hr>
+<p>* 无序1<br>* 无序2<br>+ 无序3<br>+ 无序4<br>- 无序5</p>
+<p>- 无序6<br>+ 无序7<br>* 无序8</p>
+<ul>
+<li>无序1</li>
+<li>无序2</li>
+</ul>
+<ul>
+<li>无序3</li>
+<li>无序4</li>
+</ul>
+<ul>
+<li><p>无序5</p>
+</li>
+<li><p>无序6</p>
+</li>
+</ul>
+<ul>
+<li>无序7</li>
+</ul>
+<ul>
+<li>无序8</li>
+</ul>
+<p>吐槽：这三个是可以互相层级的，不过还没有实验出来</p>
+<hr>
+<h2 id="6-_有序列表">6. 有序列表</h2>
+<p>使用数字后面跟上句号。（还要有空格）</p>
+<hr>
+<p>\1. 有序1<br>\3. 有序2<br>\2. 有序3</p>
+<ol>
+<li>有序1</li>
+<li>有序2</li>
+<li>有序3</li>
+</ol>
+<h2 id="吐槽：如果我就想先3后2，Markdown还不让我犯这个错了">吐槽：如果我就想先3后2，Markdown还不让我犯这个错了</h2>
+<h2 id="7-_链接（Links）">7. 链接（Links）</h2>
+<p>Markdown中有两种方式，实现链接，分别为内联方式和引用方式。<br>内联方式：This is an [example link](<a href="http://example.com/" target="_blank" rel="external">http://example.com/</a>).<br>引用方式：<br>I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].  </p>
+<p>[1]: <a href="http://google.com/" target="_blank" rel="external">http://google.com/</a>        “Google”<br>[2]: <a href="http://search.yahoo.com/" target="_blank" rel="external">http://search.yahoo.com/</a>  “Yahoo Search”<br>[3]: <a href="http://search.msn.com/" target="_blank" rel="external">http://search.msn.com/</a>    “MSN Search”</p>
+<hr>
+<p>[回到主页](<a href="http://andrewbupt.github.com" target="_blank" rel="external">http://andrewbupt.github.com</a>)<br>[回到主页][1]<br>[1]: <a href="http://andrewbupt.github.com/" target="_blank" rel="external">http://andrewbupt.github.com/</a></p>
+<p><a href="http://andrewbupt.github.com" target="_blank" rel="external">回到主页</a><br><a href="http://andrewbupt.github.com/" target="_blank" rel="external">回到主页</a></p>
+<p>注意： [1]:后面必须有空格。</p>
+<hr>
+<h2 id="8-_图片（Images）">8. 图片（Images）</h2>
+<p>图片的处理方式和链接的处理方式，非常的类似。<br>内联方式：![alt text](/path/to/img.jpg “Title”)<br>引用方式：<br>![alt text][id] </p>
+<p>[id]: /path/to/img.jpg “Title”</p>
+<h2 id="9-_代码（HTML中所谓的Code）">9. 代码（HTML中所谓的Code）</h2>
+<p>实现方式有两种：<br>第一种：简单文字出现一个代码框。使用<code>&lt;blockquote&gt;</code>。（<code>不是单引号而是左上角的ESC下面~中的</code>）<br>第二种：大片文字需要实现代码框。使用Tab和四个空格。</p>
+<h2 id="10-_脚注（footnote）">10. 脚注（footnote）</h2>
+<p>实现方式如下：<br>脚注[^脚注标识]<br>[^脚注标识]: 我是脚注1</p>
+<blockquote>
+<p>脚注[^脚注标识]</p>
+<p>[^脚注标识]: 我是脚注1</p>
+</blockquote>
+<h2 id="11-_下划线">11. 下划线</h2>
+<p>在空白行下方添加三条“-”横线。（前面讲过在文字下方添加“-”，实现的2级标题）</p>
+<p>References： </p>
+<p>以上内容根据官方文档基本文档进行整理。<a href="http://daringfireball.net/projects/markdown/basics" target="_blank" rel="external">http://daringfireball.net/projects/markdown/basics</a><br>Markdown官方网站：<a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external">http://daringfireball.net/projects/markdown/</a><br>推荐一款在线的Markdown编辑器：<a href="https://stackedit.io/" target="_blank" rel="external">https://stackedit.io/</a> </p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/转载/">转载</a><a href="/tags/语法/">语法</a>
+  </div>
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2015/03/28/markdown-simple-grammar/" data-title="Markdown 11种基本语法 | Andrew&#39;s blog" data-tsina="andrewbupt" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/03/01/Change-files-default-associate-app-by-IceBerg/"  title="如何让APP成为Mac文件的默认打开程序">
+ <strong>NEXT:</strong><br/> 
+ <span>如何让APP成为Mac文件的默认打开程序
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-_标题设置（让字体变大，和word的标题意思一样）"><span class="toc-number">1.</span> <span class="toc-text">1. 标题设置（让字体变大，和word的标题意思一样）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#范例1"><span class="toc-number"></span> <span class="toc-text">范例1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#范例2"><span class="toc-number">1.</span> <span class="toc-text">范例2</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#范例3"><span class="toc-number"></span> <span class="toc-text">范例3</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#范例4"><span class="toc-number">1.</span> <span class="toc-text">范例4</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#范例5"><span class="toc-number">1.1.</span> <span class="toc-text">范例5</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附属结论：=不需要也不能转义，-是可以的"><span class="toc-number">2.</span> <span class="toc-text">附属结论：=不需要也不能转义，-是可以的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-_块注释（blockquote）"><span class="toc-number">3.</span> <span class="toc-text">2. 块注释（blockquote）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-_斜体"><span class="toc-number">4.</span> <span class="toc-text">3. 斜体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#斜体斜体"><span class="toc-number">5.</span> <span class="toc-text">斜体斜体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-_粗体"><span class="toc-number">6.</span> <span class="toc-text">4. 粗体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#粗体粗体"><span class="toc-number">7.</span> <span class="toc-text">粗体粗体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-_无序列表"><span class="toc-number">8.</span> <span class="toc-text">5. 无序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-_有序列表"><span class="toc-number">9.</span> <span class="toc-text">6. 有序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#吐槽：如果我就想先3后2，Markdown还不让我犯这个错了"><span class="toc-number">10.</span> <span class="toc-text">吐槽：如果我就想先3后2，Markdown还不让我犯这个错了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-_链接（Links）"><span class="toc-number">11.</span> <span class="toc-text">7. 链接（Links）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-_图片（Images）"><span class="toc-number">12.</span> <span class="toc-text">8. 图片（Images）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-_代码（HTML中所谓的Code）"><span class="toc-number">13.</span> <span class="toc-text">9. 代码（HTML中所谓的Code）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-_脚注（footnote）"><span class="toc-number">14.</span> <span class="toc-text">10. 脚注（footnote）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-_下划线"><span class="toc-number">15.</span> <span class="toc-text">11. 下划线</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/OSX/" title="OSX">OSX<sup>1</sup></a></li>
+		
+			<li><a href="/tags/shell-script/" title="shell script">shell script<sup>1</sup></a></li>
+		
+			<li><a href="/tags/原创/" title="原创">原创<sup>1</sup></a></li>
+		
+			<li><a href="/tags/生活/" title="生活">生活<sup>1</sup></a></li>
+		
+			<li><a href="/tags/语法/" title="语法">语法<sup>1</sup></a></li>
+		
+			<li><a href="/tags/转载/" title="转载">转载<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello, I&#39;m Andrew. Welcome to my blog on Github. <br/>
+			If you think it&#39;s useful, please share it to more people.</p>
+	</section>
+	 
+	<div class="social-font clearfix">
+		
+		<a href="http://weibo.com/2472478042" target="_blank" title="weibo"></a>
+		
+		
+		
+		<a href="https://github.com/andrewbupt" target="_blank" title="github"></a>
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
+		
+		<a href="http://yoursite.com" target="_blank" title="Andrew">Andrew</a>
+		
+<!-- show the statistic in foot -->
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254433668'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254433668%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+
+		</p>
+
+<!--  code for swift, it's a search tool -->
+<script type="text/javascript">
+(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+_st('install','ynqS43F_-wFast-6DFLd');
+</script>
+
+<!-- statistic in backend -->
+<!--
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254433668'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254433668%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+-->
+	
+
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"andrew"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+  </body>
+</html>
