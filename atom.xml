@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Action speak louder than words.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-03-28T09:52:26.641Z</updated>
+  <updated>2015-03-28T11:01:29.805Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,9 +19,9 @@
     <link href="http://yoursite.com/2015/03/28/markdown-simple-grammar/"/>
     <id>http://yoursite.com/2015/03/28/markdown-simple-grammar/</id>
     <published>2015-03-28T07:58:42.000Z</published>
-    <updated>2015-03-28T09:51:55.298Z</updated>
+    <updated>2015-03-28T11:01:09.075Z</updated>
     <content type="html"><![CDATA[<p>文章是Leo Chin在学习Markdown时做的笔记。因为有时候不用，Markdown常用语法就容易混淆，所以转载并增加范例，以便以后快速使用Markdown。原址请访问：<a href="http://gd.sina.com.cn/yj/life/2015-01-14/083515454.html" target="_blank" rel="external">http://gd.sina.com.cn/yj/life/2015-01-14/083515454.html</a></p>
-<h2 id="1-_标题设置（让字体变大，和word的标题意思一样）">1. 标题设置（让字体变大，和word的标题意思一样）</h2>
+<h2 id="标题设置（让字体变大，和word的标题意思一样）">标题设置（让字体变大，和word的标题意思一样）</h2>
 <p>在Markdown当中设置标题，有两种方式：<br>第一种：通过在文字下方添加“=”和“-”，他们分别表示一级标题和二级标题。<br>第二种：在文字开头加上 “#”，通过“#”数量表示几级标题。（一共只有1~6级标题，1级标题字体最大）</p>
 <hr>
 <blockquote>
@@ -31,9 +31,10 @@
 <h1 id="范例3">范例3</h1>
 <h2 id="范例4">范例4</h2>
 <h3 id="范例5">范例5</h3>
-<h2 id="附属结论：=不需要也不能转义，-是可以的">附属结论：=不需要也不能转义，-是可以的</h2>
+<p>附属结论：=不需要也不能转义，-是可以的</p>
 </blockquote>
-<h2 id="2-_块注释（blockquote）">2. 块注释（blockquote）</h2>
+<hr>
+<h2 id="块注释（blockquote）">块注释（blockquote）</h2>
 <p>通过在文字开头添加“&gt;”表示块注释。（当&gt;和文字之间添加五个blank时，块注释的文字会有变化。）</p>
 <hr>
 <p>>注释1<br>跟>进</p>
@@ -55,17 +56,19 @@
 </li>
 </ol>
 <hr>
-<h2 id="3-_斜体">3. 斜体</h2>
+<h2 id="斜体">斜体</h2>
 <p>将需要设置为斜体的文字两端使用1个“*”或者“_”夹起来</p>
 <hr>
 <p>*斜体*_斜体_</p>
-<h2 id="斜体斜体"><em>斜体</em><em>斜体</em></h2>
-<h2 id="4-_粗体">4. 粗体</h2>
+<p><em>斜体</em><em>斜体</em></p>
+<hr>
+<h2 id="粗体">粗体</h2>
 <p>将需要设置为粗体的文字两端使用2个“*”或者“_”夹起来</p>
 <hr>
 <p>**粗体**__粗体__</p>
-<h2 id="粗体粗体"><strong>粗体</strong><strong>粗体</strong></h2>
-<h2 id="5-_无序列表">5. 无序列表</h2>
+<p><strong>粗体</strong><strong>粗体</strong></p>
+<hr>
+<h2 id="无序列表">无序列表</h2>
 <p>在文字开头添加(<em>, +, and -)实现无序列表。但是要注意在(</em>, +, and -)和文字之间需要添加空格。（建议：一个文档中只是用一种无序列表的表示方式）</p>
 <hr>
 <p>* 无序1<br>* 无序2<br>+ 无序3<br>+ 无序4<br>- 无序5</p>
@@ -92,7 +95,7 @@
 </ul>
 <p>吐槽：这三个是可以互相层级的，不过还没有实验出来</p>
 <hr>
-<h2 id="6-_有序列表">6. 有序列表</h2>
+<h2 id="有序列表">有序列表</h2>
 <p>使用数字后面跟上句号。（还要有空格）</p>
 <hr>
 <p>\1. 有序1<br>\3. 有序2<br>\2. 有序3</p>
@@ -101,8 +104,9 @@
 <li>有序2</li>
 <li>有序3</li>
 </ol>
-<h2 id="吐槽：如果我就想先3后2，Markdown还不让我犯这个错了">吐槽：如果我就想先3后2，Markdown还不让我犯这个错了</h2>
-<h2 id="7-_链接（Links）">7. 链接（Links）</h2>
+<p>吐槽：如果我就想先3后2，Markdown还不让我犯这个错了</p>
+<hr>
+<h2 id="链接（Links）">链接（Links）</h2>
 <p>Markdown中有两种方式，实现链接，分别为内联方式和引用方式。<br>内联方式：This is an [example link](<a href="http://example.com/" target="_blank" rel="external">http://example.com/</a>).<br>引用方式：<br>I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].  </p>
 <p>[1]: <a href="http://google.com/" target="_blank" rel="external">http://google.com/</a>        “Google”<br>[2]: <a href="http://search.yahoo.com/" target="_blank" rel="external">http://search.yahoo.com/</a>  “Yahoo Search”<br>[3]: <a href="http://search.msn.com/" target="_blank" rel="external">http://search.msn.com/</a>    “MSN Search”</p>
 <hr>
@@ -110,18 +114,18 @@
 <p><a href="http://andrewbupt.github.com" target="_blank" rel="external">回到主页</a><br><a href="http://andrewbupt.github.com/" target="_blank" rel="external">回到主页</a></p>
 <p>注意： [1]:后面必须有空格。</p>
 <hr>
-<h2 id="8-_图片（Images）">8. 图片（Images）</h2>
+<h2 id="图片（Images）">图片（Images）</h2>
 <p>图片的处理方式和链接的处理方式，非常的类似。<br>内联方式：![alt text](/path/to/img.jpg “Title”)<br>引用方式：<br>![alt text][id] </p>
 <p>[id]: /path/to/img.jpg “Title”</p>
-<h2 id="9-_代码（HTML中所谓的Code）">9. 代码（HTML中所谓的Code）</h2>
-<p>实现方式有两种：<br>第一种：简单文字出现一个代码框。使用<code>&lt;blockquote&gt;</code>。（<code>不是单引号而是左上角的ESC下面~中的</code>）<br>第二种：大片文字需要实现代码框。使用Tab和四个空格。</p>
-<h2 id="10-_脚注（footnote）">10. 脚注（footnote）</h2>
+<h2 id="代码（HTML中所谓的Code）">代码（HTML中所谓的Code）</h2>
+<p>实现方式有两种：<br>第一种：简单文字出现一个代码框。使用`<blockquote>`。（`不是单引号而是左上角的ESC下面~中的`）<br>第二种：大片文字需要实现代码框。使用Tab和四个空格。</blockquote></p>
+<h2 id="脚注（footnote）">脚注（footnote）</h2>
 <p>实现方式如下：<br>脚注[^脚注标识]<br>[^脚注标识]: 我是脚注1</p>
 <blockquote>
 <p>脚注[^脚注标识]</p>
 <p>[^脚注标识]: 我是脚注1</p>
 </blockquote>
-<h2 id="11-_下划线">11. 下划线</h2>
+<h2 id="下划线">下划线</h2>
 <p>在空白行下方添加三条“-”横线。（前面讲过在文字下方添加“-”，实现的2级标题）</p>
 <p>References： </p>
 <p>以上内容根据官方文档基本文档进行整理。<a href="http://daringfireball.net/projects/markdown/basics" target="_blank" rel="external">http://daringfireball.net/projects/markdown/basics</a><br>Markdown官方网站：<a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external">http://daringfireball.net/projects/markdown/</a><br>推荐一款在线的Markdown编辑器：<a href="https://stackedit.io/" target="_blank" rel="external">https://stackedit.io/</a> </p>
