@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Action speak louder than words.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-03-01T16:17:34.552Z</updated>
+  <updated>2015-03-28T07:40:01.357Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/03/01/Change-files-default-associate-app-by-IceBerg/"/>
     <id>http://yoursite.com/2015/03/01/Change-files-default-associate-app-by-IceBerg/</id>
     <published>2015-03-01T02:04:57.000Z</published>
-    <updated>2015-03-01T16:17:29.034Z</updated>
+    <updated>2015-03-28T07:26:19.951Z</updated>
     <content type="html"><![CDATA[<p>  公司的Mac App产品，需要设置成为打开特定格式(.CSV 和 .XLS)文件的默认程序。<br>  经过调研，在程序启动后向OSX系统com.apple.LaunchServices服务，写入特定的信息，可以满足需求。但是PM认为用户可能更想要在将APP安装后，就设置为特定文件的默认打开程序，而不是在首次启动程序之后。<br>  这就需要在将APP下载到Mac上之后，能自动执行一些脚本。因为Mac的普通APP安装，其实就是从DMG虚拟磁盘文件里或网上直接将APP拷贝到Mac上，期间无法进行脚本调用。于是只能借用打包软件，让用户按步骤安装。<br>  我找到了IceBerg这款开源打包软件。软件很容易上手，执行也很快，打包之后的压缩大小和zip压缩幅度差不多。<br>  但在使用过程中，发现脚本执行结果和预期的不一样。<br>脚本如下：</p>
 <pre><code>echo "clear user/system local session <span class="operator"><span class="keyword">cache</span><span class="string">" &gt;&gt; ~/.Log.log
 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -domain local -domain system -domain user
@@ -49,8 +49,13 @@ defaults read com.apple.LaunchServices LSHandlers &gt;&gt; ~/.Log.log
 exit
 !
 exit 0</span>
-</code></pre><h1 id="参考文献">参考文献</h1>
-<p>[1] <a href="http://bbs.chinaunix.net/thread-2306026-1-1.html" target="_blank" rel="external">Shell 中切换用户</a><br>[2] <a href="http://blog.csdn.net/newdriver2783/article/details/8059368" target="_blank" rel="external">Linux下用于查看系统当前登录用户信息的4种方法</a></p>
+</code></pre><p>补充：</p>
+<ol>
+<li>后来发现，在脚本环境中，有个$User的变量是可以显示当前用户的。</li>
+</ol>
+<p>文章来自<andrewbupt.github.com>, 请保留出处!</andrewbupt.github.com></p>
+<h1 id="参考文献">参考文献</h1>
+<p>[1]:<a href="http://bbs.chinaunix.net/thread-2306026-1-1.html" target="_blank" rel="external">Shell 中切换用户</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>  公司的Mac App产品，需要设置成为打开特定格式(.CSV 和 .XLS)文件的默认程序。<br>  经过调研，在程序启动后向OSX系统com.apple.LaunchServices服务，写入特定的信息，可以满足需求。但是PM认为用户可能更想要在将APP安装后，就设]]>
