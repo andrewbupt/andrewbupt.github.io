@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Action speak louder than words.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-03-28T13:17:59.435Z</updated>
+  <updated>2015-04-12T14:07:35.442Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/03/28/markdown-simple-grammar/"/>
     <id>http://yoursite.com/2015/03/28/markdown-simple-grammar/</id>
     <published>2015-03-28T07:58:42.000Z</published>
-    <updated>2015-03-28T13:17:45.149Z</updated>
+    <updated>2015-04-12T14:05:17.094Z</updated>
     <content type="html"><![CDATA[<p>文章是Leo Chin在学习Markdown时做的笔记。因为有时候不用，Markdown常用语法就容易混淆，所以转载并增加范例，以便以后快速使用Markdown。原址请访问：<a href="http://gd.sina.com.cn/yj/life/2015-01-14/083515454.html" target="_blank" rel="external">http://gd.sina.com.cn/yj/life/2015-01-14/083515454.html</a></p>
 <h2 id="标题设置（让字体变大，和word的标题意思一样）">标题设置（让字体变大，和word的标题意思一样）</h2>
 <p>在Markdown当中设置标题，有两种方式：<br>第一种：通过在文字下方添加“=”和“-”，他们分别表示一级标题和二级标题。<br>第二种：在文字开头加上 “#”，通过“#”数量表示几级标题。（一共只有1~6级标题，1级标题字体最大）</p>
